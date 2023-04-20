@@ -1,23 +1,64 @@
+<script>
+import Button from './Button.vue';
+export default {
+  components: {
+    Button
+  }
+}
+</script>
+
 <template>
-  <div class="bg-white flex ">
+  <div class="bg-white flex shadow-2xl rounded-3xl">
     <div class="h-72 w-56 rounded-3xl back">
       <div class="mt-5 flex flex-col	
-              items-center
-              justify-between">
+                items-center
+                justify-between">
         <h5 class="text-pale-blue text-xl leading-7 mb-5">Your Result</h5>
         <div class="rounded-full w-28 h-28 circle
-                    ">
+                      ">
           <h5 class="text-white text-5xl font-extrabold mt-5">76</h5>
           <p class="text-pale-blue opacity-50 text-sm">of 100</p>
         </div>
         <div>
           <h5 class="text-white text-lg font-bold">Great</h5>
-          <p class="text-xs text-pale-blue opacity-70 para">Your performance exceed 65% of the people conducting the test here!</p>
+          <p class="text-xs text-pale-blue opacity-70 para">Your performance exceed 65% of the people conducting the test
+            here!</p>
         </div>
       </div>
     </div>
-    <div>
-      <h3 class="mt-5">Summary</h3>
+    <div class="m-5 w-40 flex flex-col">
+      <h3 class="text-left font-bold">Summary</h3>
+      <div>
+        <div class="border rounded-lg reaction border-white h-8 flex items-center justify-between my-3">
+          <div class="m-2 flex">
+          <img src="./..\assets\images\icon-reaction.svg" class="w-4 h-4" alt="">
+          <h6 class="text-xs ml-2 text-light-red">Reaction</h6>
+          </div>
+            <h6 class="text-xs m-2 text-dark-gray-blue"><span class="font-bold">80</span><span class=" opacity-50"> / 100</span></h6>
+        </div>
+        <div class="border rounded-lg memory border-white h-8 flex items-center justify-between my-3">
+          <div class="m-2 flex">
+          <img src="./..\assets\images\icon-memory.svg" class="w-4 h-4" alt="">
+          <h6 class="text-xs ml-2 text-orangey-yellow">Memory</h6>
+          </div>
+            <h6 class="text-xs m-2 text-dark-gray-blue"><span class="font-bold">92</span><span class=" opacity-50"> / 100</span></h6>
+        </div>
+        <div class="border rounded-lg verbal border-white h-8 flex items-center justify-between my-3">
+          <div class="m-2 flex">
+          <img src="./..\assets\images\icon-verbal.svg" class="w-4 h-4" alt="">
+          <h6 class="text-xs ml-2 text-green-teal">Verbal</h6>
+          </div>
+            <h6 class="text-xs m-2 text-dark-gray-blue"><span class="font-bold">61</span><span class=" opacity-50"> / 100</span></h6>
+        </div>
+        <div class="border rounded-lg visual border-white h-8 flex items-center justify-between my-3">
+          <div class="m-2 flex">
+          <img src="./..\assets\images\icon-visual.svg" class="w-4 h-4" alt="">
+          <h6 class="text-xs ml-2 text-cobalt-blue">Visual</h6>
+          </div>
+            <h6 class="text-xs m-2 text-dark-gray-blue"><span class="font-bold">73</span><span class="opacity-50"> / 100</span></h6>
+        </div>
+      </div>
+      <Button />
     </div>
   </div>
 </template>
@@ -31,7 +72,23 @@
   background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
 }
 
-.para{
+.para {
   padding-inline: 28px;
+}
+
+.reaction {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FF5555;
+}
+
+.memory {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FFB21E;
+}
+
+.verbal{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #00BB8F;
+}
+
+.visual{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1125D6;
 }
 </style>
